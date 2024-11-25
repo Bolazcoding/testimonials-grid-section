@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&display=swap");
+
+$primary-moderate-violet: hsl(263, 55%, 52%);
+$primary-very-dark-grayish-blue: hsl(217, 19%, 35%);
+$primary-very-dark-blackish-blue: hsl(219, 29%, 14%);
+$primary-white: hsl(0, 0%, 100%);
+
+$neutral-light-gray: hsl(0, 0%, 81%);
+$neutral-light-grayish-blue: hsl(210, 46%, 95%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $neutral-light-grayish-blue;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh;
+}
+
+.container {
+  max-width: 110rem;
+  margin: 5rem auto;
+}
+
+.testimonial {
+  background-color: $primary-moderate-violet;
+  border-radius: 1.1rem;
+  padding: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+
+  gap: 3rem;
+
+  grid-template-areas:
+    "grid--1 grid--1 grid--2 grid--3"
+    "grid--4 grid--5 grid--5 grid--3";
+}
+
+.container > :nth-child(1) {
+  grid-area: grid--1;
+}
+
+.container > :nth-child(2) {
+  grid-area: grid--2;
+  background-color: $primary-very-dark-grayish-blue;
+}
+
+.container > :nth-child(3) {
+  grid-area: grid--3;
+  background-color: $primary-white;
+}
+
+.container > :nth-child(4) {
+  grid-area: grid--4;
+  background-color: $primary-white;
+}
+
+.container > :nth-child(5) {
+  grid-area: grid--5;
+  background-color: $primary-very-dark-blackish-blue;
+}
+
+.header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.img {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+}
+
+.header-name {
+  color: $neutral-light-grayish-blue;
+  margin-bottom: 0.3rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.name {
+  color: $primary-very-dark-blackish-blue;
+}
+
+.header-title {
+  color: $neutral-light-gray;
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 50%;
+}
+
+.title {
+  color: $primary-very-dark-grayish-blue;
+}
+
+.testimonial-body {
+  margin-top: 1.5rem;
+}
+
+.testimonial-body-bigtext {
+  color: $neutral-light-grayish-blue;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.bigtext {
+  color: $primary-very-dark-blackish-blue;
+}
+
+.testimonial-body-smalltext {
+  color: $neutral-light-gray;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  opacity: 70%;
+}
+
+.smalltext {
+  color: $primary-very-dark-grayish-blue;
+}
+
+//
+// 1180px
+@media (max-width: 73.75em) {
+  html {
+    font-size: 52%;
+  }
+}
+
+// 935.08px
+@media (max-width: 58.44em) {
+  html {
+    font-size: 48%;
+  }
+}
+
+// 870.08
+@media (max-width: 54.38em) {
+  html {
+    font-size: 54%;
+  }
+
+  .container {
+    max-width: 70rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "grid--1"
+      "grid--2"
+      "grid--3"
+      "grid--4"
+      "grid--5";
+  }
+}
+
+// 610.08px
+@media (max-width: 38.13em) {
+  .container {
+    margin: 5rem 2rem;
+  }
+
+  html {
+    font-size: 60%;
+  }
+}
+
+.grid--1 {
+  position: relative;
+}
+
+.grid--1::after {
+  content: url(../images/bg-pattern-quotation.svg);
+  top: 1%;
+  left: 65%;
+  position: absolute;
+  z-index: 1;
+  opacity: 30%;
+}
+
+// 390.08px
+@media (max-width: 22.5em) {
+  .grid--1::after {
+    display: none;
+  }
+}
