@@ -36,8 +36,8 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
 
 ### Links
 
-- Solution URL: [Solution URL](https://github.com/Bolazcoding/four-card-feature)
-- Live Site URL: [Live site URL](https://bolazcoding.github.io/four-card-feature/)
+- Solution URL: [Solution URL](https://github.com/Bolazcoding/testimonials-grid-section)
+- Live Site URL: [Live site URL](https://testimonials-grid-section-pink.vercel.app/)
 
 ## My process
 
@@ -50,12 +50,13 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+- Grid
 - Mobile-first workflow
 - Preprocessor, SCSS
 
 ### What I learned
 
-- I tested my CSS skills, using box model, media queries and flexbox.
+- I tested my CSS skills, using grid box model, media queries and flexbox.
 
 ### Continued development
 
